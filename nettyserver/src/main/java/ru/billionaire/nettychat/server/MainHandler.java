@@ -49,6 +49,7 @@ public class MainHandler extends SimpleChannelInboundHandler<String> {
         System.out.println("Клиент " + clientName + " отвалился");
         channels.remove(ctx.channel());
         broadcastMessage("SERVER", "Клиент " + clientName + " вышел из сети");
+        System.out.println("Close");
         ctx.close();
     }
 
